@@ -3,10 +3,14 @@ import java.util.Map;
 
 public class SpootifyMenu {
     private Map<String, SpootifyPlaylist> playlists;
+
+    public Map<String, SpootifyPlaylist> getPlaylists(){
+		return playlists;
+	}
     
     public SpootifyMenu(){
-        
         playlists = new HashMap<String, SpootifyPlaylist>();
+        addPlaylist("library");
     }
 
     public void addPlaylist(String playlistTitle){

@@ -62,6 +62,8 @@ public class SpootifyPlaylist extends SpootifyContent {
     }
 
     public String getDescription(){
-        return String.format("Título da Playlist: %s\nDuração: %s\n Conteúdos: %d ", this.getTitle(), getDurationFormated(), contentList.size());
+        String titulo = this.getTitle();
+        if(titulo == "library") titulo = "Biblioteca";
+        return String.format("Título da Playlist: %s\nDuração: %s\nConteúdos: %d ", titulo, getDurationFormated(), contentList.size());
     }
 }
