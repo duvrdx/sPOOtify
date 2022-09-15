@@ -1,5 +1,9 @@
 # **sPOOtify**
 
+**Screenshot**
+_________________
+![screenshot](assets/screenshot_initial.png)
+
 ***EN***
 _________________
 A project developed in the discipline of Object Oriented Programming, to apply and improve the concepts of Object Orientation.
