@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.io.*;
 
 public class SpotifyApp {
 
@@ -14,6 +13,17 @@ public class SpotifyApp {
         System.out.println("\u001B[32m\n               ⢀⣠⣤⣤⣶⣶⣶⣶⣤⣤⣄⡀\n        ⠀   ⢀⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⡀\n        ⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦\n        ⠀⢀⣾⣿⡿⠿⠛⠛⠛⠉⠉⠉⠉⠛⠛⠛⠿⠿⣿⣿⣿⣿⣿⣷⡀\n        ⠀⣾⣿⣿⣇⠀⣀⣀⣠⣤⣤⣤⣤⣤⣀⣀⠀⠀⠀⠈⠙⠻⣿⣿⣷ \n        ⢠⣿⣿⣿⣿⡿⠿⠟⠛⠛⠛⠛⠛⠛⠻⠿⢿⣿⣶⣤⣀⣠⣿⣿⣿⡄\n        ⢸⣿⣿⣿⣿⣇⣀⣀⣤⣤⣤⣤⣤⣄⣀⣀⠀⠀⠉⠛⢿⣿⣿⣿⣿⡇  sPOOtify\n        ⠘⣿⣿⣿⣿⣿⠿⠿⠛⠛⠛⠛⠛⠛⠿⠿⣿⣶⣦⣤⣾⣿⣿⣿⣿⠃  by: @duvrdx\n        ⠀⢿⣿⣿⣿⣿⣤⣤⣤⣤⣶⣶⣦⣤⣤⣄⡀⠈⠙⣿⣿⣿⣿⣿⡿\n        ⠀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⣿⣿⡿⠁\n        ⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟\n        ⠀⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠁\n        ⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⠿⠿⠿⠿⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀\n\n");
     }
     
+    public static void pressEnter(Scanner dataScanner){
+        System.out.println("==================================================================================+++---");
+        System.out.println("Pressione 'ENTER' para ir ao menu");
+        System.out.println("==================================================================================+++---");
+        dataScanner.nextLine();
+    }
+
+    public static void closeScanner(Scanner scanner){
+        scanner.close();
+    }
+
     public static SpootifyMusic createMusic(Scanner dataScanner){
         Scanner stringCutter;
         String title;
@@ -201,10 +211,7 @@ public class SpotifyApp {
         }else{
             System.out.println("Não existem conteúdos que atendam esse requisito :(");
         }
-        System.out.println("==================================================================================+++---");
-        System.out.println("Pressione 'ENTER' para voltar ao menu");
-        System.out.println("==================================================================================+++---");
-        dataScanner.nextLine();
+        pressEnter(dataScanner);
 
     }
 
@@ -223,10 +230,8 @@ public class SpotifyApp {
         } else{
             System.out.println("Já existe uma playlist chamada " + playlistTitle + "!");
         }
-        System.out.println("==================================================================================+++---");
-        System.out.println("Pressione 'ENTER' para voltar ao menu");
-        System.out.println("==================================================================================+++---");
-        dataScanner.nextLine();
+
+        pressEnter(dataScanner);
     }
     
     public static void deletePlaylist(Scanner dataScanner, SpootifyMenu menu){
@@ -246,10 +251,7 @@ public class SpotifyApp {
         else
             System.out.println("Não existe uma playlist chamada " + playlistTitle + "!");
 
-        System.out.println("==================================================================================+++---");
-        System.out.println("Pressione 'ENTER' para voltar ao menu");
-        System.out.println("==================================================================================+++---");
-        dataScanner.nextLine();
+        pressEnter(dataScanner);
     }
 
     public static void showPlaylists(Scanner dataScanner, SpootifyMenu menu){
@@ -262,10 +264,8 @@ public class SpotifyApp {
         }else{
             System.out.println("Você não possui playlists :(");
         }
-        System.out.println("==================================================================================+++---");
-        System.out.println("Pressione 'ENTER' para voltar ao menu");
-        System.out.println("==================================================================================+++---");
-        dataScanner.nextLine();
+
+        pressEnter(dataScanner);
     }
 
     public static void main(String[] args){
@@ -278,6 +278,7 @@ public class SpotifyApp {
         clearTerminal();
         printSpootifyLogo();
         System.out.println("Olá, seja bem vindo ao sPOOtify!\n");
+        pressEnter(dataScanner);
 
         while(actualCommand != 4){
             clearTerminal();
@@ -307,10 +308,7 @@ public class SpotifyApp {
                 // Exibir informações da biblioteca
                 case 3:
                     System.out.println(myMenu.getPlaylist("library").getDescription());
-                    System.out.println("==================================================================================+++---");
-                    System.out.println("Pressione 'ENTER' para voltar ao menu");
-                    System.out.println("==================================================================================+++---");
-                    dataScanner.nextLine();
+                    pressEnter(dataScanner);
                     break;
                 
                 // Criar nova playlist
@@ -332,10 +330,7 @@ public class SpotifyApp {
                     if(myMenu.playlistExists(playlistTitle)) addToPlaylist(dataScanner, playlistTitle, myMenu);
                     else{
                         System.out.println("Essa playlist não existe!");
-                        System.out.println("==================================================================================+++---");
-                        System.out.println("Pressione 'ENTER' para voltar ao menu");
-                        System.out.println("==================================================================================+++---");
-                        dataScanner.nextLine();
+                        pressEnter(dataScanner);
                     }
                     break;
 
@@ -349,8 +344,7 @@ public class SpotifyApp {
                     System.out.println("Saindo...");
                     break;
             }
-
         }
-
+        closeScanner(dataScanner);
     }
 }

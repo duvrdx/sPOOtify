@@ -35,4 +35,5 @@ public class SpootifyMusic extends SpootifyContent {
     public void setGenre(String genre) {
         this.genre = genre;
     }
+
 }
