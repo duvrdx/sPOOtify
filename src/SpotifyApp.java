@@ -10,7 +10,7 @@ public class SpotifyApp {
     }
 
     public static void printSpootifyLogo(){
-        System.out.println("\u001B[32m\n               ⢀⣠⣤⣤⣶⣶⣶⣶⣤⣤⣄⡀\n        ⠀   ⢀⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⡀\n        ⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦\n        ⠀⢀⣾⣿⡿⠿⠛⠛⠛⠉⠉⠉⠉⠛⠛⠛⠿⠿⣿⣿⣿⣿⣿⣷⡀\n        ⠀⣾⣿⣿⣇⠀⣀⣀⣠⣤⣤⣤⣤⣤⣀⣀⠀⠀⠀⠈⠙⠻⣿⣿⣷ \n        ⢠⣿⣿⣿⣿⡿⠿⠟⠛⠛⠛⠛⠛⠛⠻⠿⢿⣿⣶⣤⣀⣠⣿⣿⣿⡄\n        ⢸⣿⣿⣿⣿⣇⣀⣀⣤⣤⣤⣤⣤⣄⣀⣀⠀⠀⠉⠛⢿⣿⣿⣿⣿⡇  sPOOtify\n        ⠘⣿⣿⣿⣿⣿⠿⠿⠛⠛⠛⠛⠛⠛⠿⠿⣿⣶⣦⣤⣾⣿⣿⣿⣿⠃  by: @duvrdx\n        ⠀⢿⣿⣿⣿⣿⣤⣤⣤⣤⣶⣶⣦⣤⣤⣄⡀⠈⠙⣿⣿⣿⣿⣿⡿\n        ⠀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⣿⣿⡿⠁\n        ⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟\n        ⠀⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠁\n        ⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⠿⠿⠿⠿⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀\n\n");
+        System.out.println("\u001B[32m\n               ⢀⣠⣤⣤⣶⣶⣶⣶⣤⣤⣄⡀\n            ⢀⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⡀\n        ⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦\n        ⠀⢀⣾⣿⡿⠿⠛⠛⠛⠉⠉⠉⠉⠛⠛⠛⠿⠿⣿⣿⣿⣿⣿⣷⡀\n        ⠀⣾⣿⣿⣇⠀⣀⣀⣠⣤⣤⣤⣤⣤⣀⣀⠀⠀⠀⠈⠙⠻⣿⣿⣷ \n        ⢠⣿⣿⣿⣿⡿⠿⠟⠛⠛⠛⠛⠛⠛⠻⠿⢿⣿⣶⣤⣀⣠⣿⣿⣿⡄\n        ⢸⣿⣿⣿⣿⣇⣀⣀⣤⣤⣤⣤⣤⣄⣀⣀⠀⠀⠉⠛⢿⣿⣿⣿⣿⡇  sPOOtify\n        ⠘⣿⣿⣿⣿⣿⠿⠿⠛⠛⠛⠛⠛⠛⠿⠿⣿⣶⣦⣤⣾⣿⣿⣿⣿⠃  by: @duvrdx\n        ⠀⢿⣿⣿⣿⣿⣤⣤⣤⣤⣶⣶⣦⣤⣤⣄⡀⠈⠙⣿⣿⣿⣿⣿⡿\n        ⠀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⣿⣿⡿⠁\n        ⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟\n        ⠀⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠁\n        ⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⠿⠿⠿⠿⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀\n\n");
     }
     
     public static void pressEnter(Scanner dataScanner){
@@ -173,8 +173,7 @@ public class SpotifyApp {
     public static void showPlaylistContent(Scanner dataScanner, String playlistTitle, SpootifyMenu menu){
         List<SpootifyContent> filteredList = new ArrayList<SpootifyContent>();
         int actualCommand;
-        int counter = 1;
-        String actualType = "";
+        int counter;
 
         clearTerminal();
         System.out.println("O que deseja listar?");
@@ -199,13 +198,15 @@ public class SpotifyApp {
                 break;
         }
 
+        counter = 1;
+
         clearTerminal();
         if(!filteredList.isEmpty()){
+            System.out.println("==================================================================================+++---");
+            System.out.println("Esses são seus conteúdos");
+            System.out.println("==================================================================================+++---");
             for (SpootifyContent spootifyContent : filteredList){
-                if(spootifyContent.getClass() == SpootifyMusic.class) actualType = "Música";
-                if(spootifyContent.getClass() == SpootifyPodcast.class) actualType = "Podcast";
-                if(spootifyContent.getClass() == SpootifyAudiobook.class) actualType = "Audiobook";
-                System.out.printf("%d | %s - Título: %s - Duração: %d segundos\n", counter, actualType, spootifyContent.getTitle(), spootifyContent.getDuration());
+                System.out.printf("%d | %s\n", counter, spootifyContent.toString());
                 counter += 1;
             }
         }else{
@@ -255,11 +256,19 @@ public class SpotifyApp {
     }
 
     public static void showPlaylists(Scanner dataScanner, SpootifyMenu menu){
+        int counter =1;
         
         if(menu.getPlaylists().size() > 1){
+            System.out.println("==================================================================================+++---");
+            System.out.println("Essas são suas playlists");
+            System.out.println("==================================================================================+++---");
+
+
             for(String playlistTitle : menu.getPlaylists().keySet()){
-                if(playlistTitle != "library")
-                    System.out.println(menu.getPlaylist(playlistTitle).getDescription());
+                if(playlistTitle != "library"){
+                    System.out.printf("%d | %s\n", counter, playlistTitle);
+                    counter += 1;
+                }
             }
         }else{
             System.out.println("Você não possui playlists :(");
@@ -280,7 +289,7 @@ public class SpotifyApp {
         System.out.println("Olá, seja bem vindo ao sPOOtify!\n");
         pressEnter(dataScanner);
 
-        while(actualCommand != 4){
+        while(actualCommand != 8){
             clearTerminal();
             printSpootifyLogo();
             System.out.println("Selecione uma opção");

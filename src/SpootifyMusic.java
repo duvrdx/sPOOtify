@@ -36,4 +36,22 @@ public class SpootifyMusic extends SpootifyContent {
         this.genre = genre;
     }
 
+    
+    public String toString(){
+        String songwritersString = "";
+        String interpretersString = "";
+
+        for(String songwriter : songwriters){
+            songwritersString += songwriter + ";";
+        }
+
+        for(String interpreter : interpreters){
+            interpretersString += interpreter + ";";
+        }
+
+        interpretersString = interpretersString.replaceFirst(".$","");
+        songwritersString = songwritersString.replaceFirst(".$","");
+
+        return String.format("Música | Título: %s | Duração: %d segundos | Interpretes: %s | Compositores: %s|", title, duration, interpretersString, songwritersString);
+    }
 }

@@ -23,4 +23,8 @@ public class SpootifyPodcast extends SpootifyContent {
     public void setReview(String review) {
         this.review = review;
     }
+
+    public String toString(){
+        return String.format("Podcast | Título: %s | Duração: %d segundos | Apresentador: %s |", title, duration, presenter);
+    }
 }

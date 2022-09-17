@@ -48,4 +48,15 @@ public class SpootifyAudiobook extends SpootifyContent{
         this.synopsis = synopsis;
     }
     
+    public String describe(){
+        String authorsString = "";
+
+        for(String author : authors){
+            authorsString += author + ";";
+        }
+
+        authorsString = authorsString.replaceFirst(".$","");
+        
+        return String.format("Audiobook | Título: %s | Duração: %d segundos | Narrador: %s| Autores: %s| Editora: %s |", title, duration, storyteller, authorsString, publisher);
+    }
 }
