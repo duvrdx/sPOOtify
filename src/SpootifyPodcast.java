@@ -1,9 +1,13 @@
+import java.util.InputMismatchException;
+
 public class SpootifyPodcast extends SpootifyContent {
     private String presenter;
     private String review;
     
     public SpootifyPodcast(String title, int duration, String presenter, String review){
         super(title, duration);
+
+        if(presenter.isBlank() || review.isBlank()) throw new InputMismatchException("Entrada inválida");
         this.presenter = presenter;
         this.review = review;
     }

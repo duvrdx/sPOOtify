@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.List;
 
 public class SpootifyMusic extends SpootifyContent {
@@ -7,6 +8,10 @@ public class SpootifyMusic extends SpootifyContent {
 
     public SpootifyMusic(String title, int duration, List<String> songwriters, List<String> interpreters, String genre){
         super(title, duration);
+
+        if(title.isBlank() || songwriters.isEmpty() || interpreters.isEmpty() || genre.isBlank()) 
+            throw new InputMismatchException("Entrada inválida");
+            
         this.songwriters = songwriters;
         this.interpreters = interpreters;
         this.genre = genre;

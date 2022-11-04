@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -145,18 +146,40 @@ public class SpotifyApp {
             
             switch (actualCommand) {
                 case 1:
-                    menu.getPlaylist(playlistTitle).addContent(createMusic(dataScanner));
-                    System.out.println("Música adicionada com sucesso!");
+                    try{
+                        menu.getPlaylist(playlistTitle).addContent(createMusic(dataScanner));
+                        System.out.println("Música adicionada com sucesso!");
+                    }catch(InputMismatchException e){
+                        clearTerminal();
+                        System.out.println("Entrada inválida!\nNão foi possível adicionar o conteúdo!\nPressione ENTER para continuar");
+                        dataScanner.nextLine();
+                        clearTerminal();
+                    }
                     break;
+                    
                 
                 case 2:
-                    menu.getPlaylist(playlistTitle).addContent(createPodcast(dataScanner));
-                    System.out.println("Podcast adicionado com sucesso!");
+                    try{
+                        menu.getPlaylist(playlistTitle).addContent(createPodcast(dataScanner));
+                        System.out.println("Podcast adicionado com sucesso!");
+                    }catch(InputMismatchException e){
+                        clearTerminal();
+                        System.out.println("Entrada inválida!\nNão foi possível adicionar o conteúdo!\nPressione ENTER para continuar");
+                        dataScanner.nextLine();
+                        clearTerminal();   
+                    }
                     break;
                 
                 case 3:
-                    menu.getPlaylist(playlistTitle).addContent(createAudioook(dataScanner));
-                    System.out.println("Audiobook adicionado com sucesso!");
+                    try{
+                        menu.getPlaylist(playlistTitle).addContent(createAudioook(dataScanner));
+                        System.out.println("Audiobook adicionado com sucesso!");
+                    }catch(InputMismatchException e){
+                        clearTerminal();
+                        System.out.println("Entrada inválida!\nNão foi possível adicionar o conteúdo!\nPressione ENTER para continuar");
+                        dataScanner.nextLine();
+                        clearTerminal();
+                    }
                     break;
                 }
                 
@@ -244,7 +267,7 @@ public class SpotifyApp {
         System.out.println("==================================================================================+++---");
         playlistTitle = dataScanner.nextLine();
         
-        if(menu.playlistExists(playlistTitle)){
+        if(menu.playlistExists(playlistTitle) && playlistTitle != "library"){
             menu.removePlaylist(playlistTitle);
             System.out.println("A playlist " + playlistTitle + " foi removida com sucesso!\n ");
         } else if(playlistTitle == "library")
@@ -322,7 +345,13 @@ public class SpotifyApp {
                 
                 // Criar nova playlist
                 case 4:
-                    createPlaylist(dataScanner, myMenu);
+                    try{
+                        createPlaylist(dataScanner, myMenu);
+                    }catch(InputMismatchException e){
+                        System.out.println("Entrada inválida!\nNão foi possível adicionar o conteúdo!\nPressione ENTER para continuar");
+                        dataScanner.nextLine();
+                        clearTerminal();
+                    }
                     break;
                 
                 // Criar nova playlist
@@ -340,6 +369,7 @@ public class SpotifyApp {
                     else{
                         System.out.println("Essa playlist não existe!");
                         pressEnter(dataScanner);
+                        clearTerminal();
                     }
                     break;
 

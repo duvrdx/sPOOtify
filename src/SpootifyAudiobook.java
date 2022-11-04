@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.List;
 
 public class SpootifyAudiobook extends SpootifyContent{
@@ -10,6 +11,9 @@ public class SpootifyAudiobook extends SpootifyContent{
     
     public SpootifyAudiobook(String title, int duration, String storyteller, String synopsis, List<String> authors, String publisher){
         super(title, duration);
+
+        if(storyteller.isBlank() || synopsis.isBlank() || authors.isEmpty() || publisher.isBlank())
+            throw new InputMismatchException("Entrada invalida");
         this.storyteller = storyteller;
         this.synopsis = synopsis;
         this.authors = authors;
