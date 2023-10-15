@@ -25,6 +25,8 @@ public class SpotifyApp {
         scanner.close();
     }
 
+    
+
     public static SpootifyMusic createMusic(Scanner dataScanner){
         Scanner stringCutter;
         String title;
@@ -305,38 +307,38 @@ public class SpotifyApp {
         Scanner dataScanner = new Scanner(System.in);
         int actualCommand = 0;
         String playlistTitle;
-
+    
         // Criando playlist com dados do usuário
         clearTerminal();
         printSpootifyLogo();
         System.out.println("Olá, seja bem vindo ao sPOOtify!\n");
         pressEnter(dataScanner);
-
+    
         while(actualCommand != 8){
             clearTerminal();
             printSpootifyLogo();
             System.out.println("Selecione uma opção");
             System.out.println("==================================================================================+++---");
             System.out.println("1. Preencher a sua Biblioteca           | 2. Listar os conteúdos da Bilioteca\n3. Exibir informações da Biblioteca     | 4. Criar uma nova Playlist");
-            System.out.println("5. Excluir uma Playlist                 | 6. Adicionar conteúdo a Playlist\n7. Listar Playlists                     | 8. Sair");
+            System.out.println("5. Excluir uma Playlist                 | 6. Adicionar conteúdo a Playlist\n7. Listar Playlists                     | 8. Sair\n9. Tocar música");
             System.out.println("==================================================================================+++---");
             actualCommand = dataScanner.nextInt();
             dataScanner.nextLine();
-
+    
             clearTerminal();
             printSpootifyLogo();
-
+    
             switch(actualCommand){
                 // Adicionar conteúdo a biblioteca
                 case 1:
                     addToPlaylist(dataScanner, "library", myMenu);
                     break;
-
+    
                 // Listar conteúdos da biblioteca
                 case 2:
                     showPlaylistContent(dataScanner, "library", myMenu);
                     break;
-
+    
                 // Exibir informações da biblioteca
                 case 3:
                     System.out.println(myMenu.getPlaylist("library").getDescription());
@@ -353,12 +355,12 @@ public class SpotifyApp {
                         clearTerminal();
                     }
                     break;
-                
+                    
                 // Criar nova playlist
                 case 5:
                     deletePlaylist(dataScanner, myMenu);
                     break;
-                
+                    
                 // Adicionar a uma playlist
                 case 6:
                     System.out.println("==================================================================================+++---");
@@ -372,15 +374,33 @@ public class SpotifyApp {
                         clearTerminal();
                     }
                     break;
-
+    
                 // Listando playlists
                 case 7:
                     showPlaylists(dataScanner, myMenu);
                     break;
-
+    
                 // Sair
                 case 8:
                     System.out.println("Saindo...");
+                    break;
+    
+                // Tocar música
+                case 9:
+                    System.out.println("==================================================================================+++---");
+                    System.out.println("Digite o título da música");
+                    System.out.println("==================================================================================+++---");
+                    String songTitle = dataScanner.nextLine();
+    
+                    // Toca a música com o título especificado.
+                    myMenu.playMusic(songTitle);
+    
+                    try {
+                        Thread.sleep(5000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+    
                     break;
             }
         }

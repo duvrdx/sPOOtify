@@ -9,6 +9,9 @@ public class SpootifyPlaylist extends SpootifyContent {
         super(title, 0);
         contentList = new LinkedList<SpootifyContent>();
     }
+    public List<SpootifyContent> getContent() {
+        return contentList;
+    }
 
     public List<SpootifyContent> getContentList() {
         return this.contentList;
@@ -30,6 +33,7 @@ public class SpootifyPlaylist extends SpootifyContent {
 
         return String.format("%02d:%02d:%02d", hours, minutes, seconds);
     }
+    
 
     public void addContent(SpootifyContent content){
         contentList.add(content);

@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class SpootifyMenu {
@@ -48,4 +50,22 @@ public class SpootifyMenu {
         return String.format("%s - %s", contentClass, content.toString());
         
     }
+    public void playMusic(String musicTitle) {
+        for (SpootifyContent content : getContent()) {
+            if (content instanceof SpootifyMusic && content.getTitle().equals(musicTitle)) {
+                ((SpootifyMusic) content).play();
+                return;
+            }
+        }
+    }
+    public List<SpootifyContent> getContent() {
+        List<SpootifyContent> content = new ArrayList<>();
+        for (SpootifyPlaylist playlist : playlists.values()) {
+            for (SpootifyContent contentItem : playlist.getContent()) {
+                content.add(contentItem);
+            }
+        }
+        return content;
+    }
+    
 }

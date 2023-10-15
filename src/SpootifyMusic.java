@@ -40,6 +40,9 @@ public class SpootifyMusic extends SpootifyContent {
     public void setGenre(String genre) {
         this.genre = genre;
     }
+    public void play() {
+        System.out.println("Tocando música: " + title);
+    }
 
     
     public String toString(){
