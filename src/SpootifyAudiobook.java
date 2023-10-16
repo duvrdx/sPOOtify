@@ -52,7 +52,7 @@ public class SpootifyAudiobook extends SpootifyContent{
         this.synopsis = synopsis;
     }
     
-    public String describe(){
+    public String toString(){
         String authorsString = "";
 
         for(String author : authors){
@@ -60,7 +60,7 @@ public class SpootifyAudiobook extends SpootifyContent{
         }
 
         authorsString = authorsString.replaceFirst(".$","");
-        
-        return String.format("Audiobook | Título: %s | Duração: %d segundos | Narrador: %s| Autores: %s| Editora: %s |", title, duration, storyteller, authorsString, publisher);
+
+        return String.format("Audiobook | Título: %s | Duração: %d segundos | Narrador: %s | Autores: %s | Editora: %s |", title, duration, storyteller, authorsString, publisher);
     }
 }
